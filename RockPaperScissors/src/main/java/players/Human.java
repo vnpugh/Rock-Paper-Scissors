@@ -2,6 +2,7 @@ package players;
 
 import java.util.Scanner;
 
+
 public class Human extends Player {
     public String makeMove() {
         Scanner scanner = new Scanner(System.in);
@@ -30,4 +31,5 @@ public class Human extends Player {
 
     //public Human(String name) {super(name);}
 
+    public String Player2;
 }

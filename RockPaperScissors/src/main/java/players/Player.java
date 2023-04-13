@@ -6,6 +6,7 @@ public abstract class Player{
     private String move;
 
     private String name;
+    private String secondPlayerName;
 
     public void setPoints(int points) {
         this.points = points;
@@ -39,9 +40,13 @@ public abstract class Player{
         this.name = name;
     }
 
+    public String getSecondPlayerName() {
+        return secondPlayerName;
+    }
 
-
-
+    public void setSecondPlayerName(String secondPlayerName) {
+        this.secondPlayerName = secondPlayerName;
+    }
 
 
 
