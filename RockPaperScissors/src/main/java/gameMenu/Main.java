@@ -37,6 +37,10 @@ public class Main {
             computer.setHasWon(false);
             computer.setMove("");
 
+            /**
+             *While loop used to display the main menu and prompts the user for input until the
+             * user chooses to exit the game.
+             */
             while (true) {
                 System.out.println("Welcome to Rock, Paper, Scissors!");
                 System.out.print("Enter Your Name: ");
