@@ -3,6 +3,17 @@ package gameInterfaces;
 import players.Player;
 
 public interface TwoPlayers {
-    void playAgainst(Player player);
+
+
+    public String makeMove();
+
+
+
+
+
+
+
+
+    //void playAgainst(Player player);
 
 }

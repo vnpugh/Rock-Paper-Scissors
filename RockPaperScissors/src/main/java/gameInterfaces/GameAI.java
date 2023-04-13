@@ -1,6 +1,20 @@
 package gameInterfaces;
 
 public interface GameAI {
-    String makeChoice();
+
+    public String makeMove();
+
+
+
+
+
+
+
+
+
+
+
+
+   // String makeChoice();
 
 }
