@@ -1,0 +1,19 @@
+game menu asks player to play against the 1. computer or a  2. friend
+getChoice() method prompts the player to enter Rock, Paper, or Scissors.
+
+
+getPlayerMove() method uses Scanner class to get the move of the player. This method will print and return the move enter by the player.
+
+getComputerMove() method uses Random class nextInt(num) method. nextInt(num) method produces the random number between 0 (inclusive) and num (exclusive). getComputerMove() method will print and return the computer move.
+
+If playerMove and computerMove are the same, then the game is a tie or draw.
+
+Else if playerMove and computerMove are different, then 3 cases are possible.
+a. If playerMove is Rock and computerMove is Paper then computer wins.
+If playerMove is Rock and computerMove is Scissors then the player wins.
+
+b. If playerMove is Paper and computerMove is Scissors then computer wins.
+If playerMove is Paper and computerMove is Rock then the player wins.
+
+c. If playerMove is Scissors and computerMove is Rock then computer wins.
+If playerMove is Scissors and computerMove is Paper then the player wins.
