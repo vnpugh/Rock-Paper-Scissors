@@ -13,9 +13,13 @@ public class PlayGame {
         ArrayList<String> history = new ArrayList<String>();
         Player player1, player2;
 
-        System.out.println("Welcome to Rock Paper Scissors!");
-        System.out.println("1. Play against another player");
-        System.out.println("2. Play against the computer");
+        System.out.println("Welcome to Rock Paper Scissors!\n");
+        System.out.println("Select A Game Option: ");
+        System.out.println("1. Play Against Another Player\uD83D\uDE00");
+        System.out.println("2. Play Against the Computer");
+        System.out.println("3. View Your Game History");
+        System.out.println("4. Exit Game");
+
         System.out.print("Enter your choice: ");
         int choice = scanner.nextInt();
 
