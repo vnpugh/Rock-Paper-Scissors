@@ -9,7 +9,7 @@ import java.util.Random;
  */
 
 public class Computer extends Player implements RockPaperScissors, GameAI {
-    private Random random = new Random(); //this method generates random
+    private Random random = new Random(); //this method generates random choice(rock, paper, or scissors)
 
     public Computer() {
         super();
