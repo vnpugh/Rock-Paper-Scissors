@@ -5,9 +5,5 @@ package gameInterfaces;
  *search RandomAI, minimaxAI, GreedyAI
  */
 public interface GameAI {
-
-    public String makeMove();
-
-
-
+    int makeMove(int[] moves);
 }

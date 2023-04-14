@@ -1,7 +1,9 @@
 package gameMenu;
 
+
 import players.Computer;
 import players.Human;
+import players.Player;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -37,160 +39,90 @@ public class Main {
             computer.setHasWon(false);
             computer.setMove("");
 
-            /**
-             *While loop used to display the main menu and prompts the user for input until the
-             * user chooses to exit the game.
-             */
             while (true) {
-                System.out.println("Welcome to Rock, Paper, Scissors!");
+                System.out.println("\nWelcome to Rock, Paper, Scissors!");
                 System.out.print("Enter Your Name: ");
                 String name = scanner.nextLine();
-                System.out.print("Main Menu: Choose A Game Option: \n");
-                System.out.println("1. Play against computer");
+                System.out.print("Welcome " + name + "!\n");
+                System.out.print("\nMain Menu: Choose A Game Option: \n");
+                //System.out.println("Select an option:");
+                System.out.println("1. Play against the computer");
                 System.out.println("2. Play against another player");
                 System.out.println("3. View game history");
-                System.out.println("4. Exit");
-                System.out.print("Enter your choice: ");
+                System.out.println("4. Exit/Quit");
+
                 int choice = scanner.nextInt();
-                scanner.nextLine(); // consume newline character after integer input
-              //PLAYING AGAINST COMPUTER
+
                 if (choice == 1) {
-                    System.out.println("You are playing against the computer.");
-                    while (true) {
-                        String humanMove = human.makeMove();
-                        String computerMove = computer.makeMove();
+                    System.out.println("You are playing against the computer!");
+                    while (!human.getHasWon() && !computer.getHasWon()) {
+                        int humanMove = human.getMove();
+                        int computerMove = computer.getMove();
 
-                        if (humanMove.equals("rock")) {
-                            if (computerMove.equals("rock")) {
-                                System.out.println("It's a tie!");
-                                history.add("Tie");
-                            } else if (computerMove.equals("paper")) {
-                                System.out.println("You lose!");
-                                computer.setPoints(computer.getPoints() + 1);
-                                history.add("Computer");
-                            } else {
-                                System.out.println("You win!");
-                                human.setPoints(human.getPoints() + 1);
-                                human.setHasWon(true);
-                                history.add(name);
-                            }
-                        } else if (humanMove.equals("paper")) {
-                            if (computerMove.equals("paper")) {
-                                System.out.println("It's a tie!");
-                                history.add("Tie");
-                            } else if (computerMove.equals("scissors")) {
-                                System.out.println("You lose!");
-                                computer.setPoints(computer.getPoints() + 1);
-                                history.add("Computer");
-                            } else {
-                                System.out.println("You win!");
-                                human.setPoints(human.getPoints() + 1);
-                                human.setHasWon(true);
-                                history.add(name);
-                            }
-                        } else if (humanMove.equals("scissors")) {
-                            if (computerMove.equals("scissors")) {
-                                System.out.println("It's a tie!");
-                                history.add("Tie");
-                            } else if (computerMove.equals("rock")) {
-                                System.out.println("You lose!");
-                                computer.setPoints(computer.getPoints() + 1);
-                                history.add("Computer");
-                            } else {
-                                System.out.println("You win!");
-                                human.setPoints(human.getPoints() + 1);
-                                human.setHasWon(true);
-                                history.add(name);
-                            }
+                        if (humanMove == computerMove) {
+                            human.setMove(RockPaperScissors.toString(String.valueOf(humanMove)));
+                            computer.setMove(RockPaperScissors.toString(String.valueOf(computerMove)));
+                            history.add("It's a tie!");
+                            System.out.println("It's a tie!");
                         } else {
-                            System.out.println("Invalid move. Please try again.");
-                            continue;
+                            computer.setPoints(computer.getPoints() + 1);
+                            human.setMove(RockPaperScissors.toString(String.valueOf(humanMove)));
+                            computer.setMove(RockPaperScissors.toString(String.valueOf(computerMove)));
+                            history.add("Computer wins!");
+                            System.out.println("Computer wins!");
                         }
 
-                        System.out.println("Your move: " + humanMove);
-                        System.out.println("Computer's move: " + computerMove);
-                        System.out.println(name + ": " + human.getPoints() + "  Computer: " + computer.getPoints());
 
-                        System.out.print("Do you want to play again? (Y/N): ");
-                        String playAgain = scanner.next();
 
-                        if (playAgain.equalsIgnoreCase("n")) {
-                            break;
-                        }
-                    }
-
-                    //PLAYING AGAINST ANOTHER PLAYER2
+                    } //the game loop for both players and the getMove() method to call for each player's turn.
                 } else if (choice == 2) {
-
-                    System.out.println("You are playing against another player.");
-                    System.out.print("Enter The Second Player's Name: ");
-
-
-                    String secondPlayerName = scanner.nextLine();
-                    Human player2 = new Human();
+                    System.out.println("You are playing against another player!\n");
+                    System.out.print("Best of Luck!\n");
+                    Player player1 = new Human("Player 1");
+                    Player player2 = new Human("Player 2");
+                    player1.setPoints(0);
                     player2.setPoints(0);
+                    player1.setHasWon(false);
                     player2.setHasWon(false);
-                    player2.setMove("");
 
-                    while (true) {
-                        String humanMove = human.makeMove();
-                        String player2Move = player2.makeMove();
 
-                        if (humanMove.equals("rock")) {
-                            if (player2Move.equals("rock")) {
-                                System.out.println("It's a tie!");
-                                history.add("Tie");
-                            } else if (player2Move.equals("paper")) {
-                                System.out.println("Player 2 wins!");
-                                player2.setPoints(player2.getPoints() + 1);
-                                history.add("Player 2");
-                            } else {
-                                System.out.println(name + " wins!");
-                                human.setPoints(human.getPoints() + 1);
-                                human.setHasWon(true);
-                                history.add(name);
-                            }
-                        } else if (humanMove.equals("paper")) {
-                            if (player2Move.equals("rock")) {
-                                System.out.println(name + " wins!");
-                                human.setPoints(human.getPoints() + 1);
-                                human.setHasWon(true);
-                                history.add(name);
-                            } else if (player2Move.equals("paper")) {
-                                System.out.println("It's a tie!");
-                                history.add("Tie");
-                            } else {
-                                System.out.println("Player 2 wins!");
-                                player2.setPoints(player2.getPoints() + 1);
-                                history.add("Player 2");
-                            }
+
+                    //player1.setMove(player1.getName());
+                    //player2.setMove(player2.getName());
+
+                    while (!player1.getHasWon() && !player2.getHasWon()) {
+                        int player1Move = player1.getMove();
+                        int player2Move = player2.getMove();
+
+                        if (player1Move == player2Move) {
+                                    player1.setMove(RockPaperScissors.toString(String.valueOf(player1Move)));
+                            player2.setMove(RockPaperScissors.toString(String.valueOf(player2Move)));
+                            history.add("It's a tie!");
+                            System.out.println("It's a tie!");
                         } else {
-                            if (player2Move.equals("rock")) {
-                                System.out.println("Player 2 wins!");
-                                player2.setPoints(player2.getPoints() + 1);
-                                history.add("Player 2");
-                            } else if (player2Move.equals("paper")) {
-                                System.out.println(name + " wins!");
-                                human.setPoints(human.getPoints() + 1);
-                                human.setHasWon(true);
-                                history.add(name);
-                            } else {
-                                System.out.println("It's a tie!");
-                                history.add("Tie");
-                            }
-                        }
-
-                        if (human.getPoints() >= 3) {
-                            System.out.println(name + " wins the game!");
-                            human.setHasWon(true);
-                            break;
-                        } else if (player2.getPoints() >= 3) {
-                            System.out.println("Player 2 wins the game!");
-                            player2.setHasWon(true);
-                            break;
+                            player2.setPoints(player2.getPoints() + 1);
+                            player1.setMove(RockPaperScissors.toString(String.valueOf(player1Move)));
+                            player2.setMove(RockPaperScissors.toString(String.valueOf(player2Move)));
+                            history.add("Player 2 wins!");
+                            System.out.println("Player 2 wins!");
                         }
                     }
-                }}}}
+                } else if (choice == 3) {
+                    System.out.println("Game History:");
+                    for (String result : history) {
+                        System.out.println(result);
+                    }
+                } else if (choice == 4) {
+                    System.out.println("Thanks for playing!");
+                    break;
+                } else {
+                    System.out.println("Invalid input. Please try again.");
+                }
+            }
+        }
+}
+
+
 
 
 
