@@ -1,5 +1,5 @@
-# Rock Paper Scissors
-<h1>Introduction</h1>
+# Rock Paper Scissors :rock::page_facing_up::scissors:
+<h1>Introduction🦾</h1>
 <p>Looking for a fun and engaging way to spend your free time? Look no further than this simple 
 Java implementation of rock-paper-scissors! With a user-friendly main menu that allows you to 
 choose between playing against a human competitor or facing off against the computer, this game 
@@ -18,7 +18,7 @@ Projects to keep track of the technical requirements and identified the resource
 the MVP (Minimum Viable Product).
 </p>
 
-<h2>Technical Requirements</h2>
+<h2>Technical Requirements🏁</h2>
 <ul>
 <li>An array is used to store the game's history and the player's game wins, losses, or ties.✅</li>
 <li>The player can play rock–paper–scissors against a computer player.✅</li>
@@ -36,7 +36,7 @@ the MVP (Minimum Viable Product).
 <img align="center" width="500" height="300" src="RockPaperScissors/assets/console.png" alt="console">
 </p>
 
-<h2>Technologies & Tools Used 🛠️</h2>
+<h2>Technologies & Tools Used🛠️</h2>
 <ul>
  <li><strong>Project Management</strong></li>
  📋Github Projects (Kanban Board)
@@ -47,11 +47,11 @@ the MVP (Minimum Viable Product).
 ⬛IntelliJ (IDE)
 ➕Unicode
 </ul>
-<h1>What I Learned📚</h1>
+<h1>What I Learned📚😖😣</h1>
 <p>Although all of the bonus items were not included in the Rock, Paper, Scissors Game, the project provided me with an opportunity to consider the game's implementation more deeply. My objective was to achieve the minimum viable product (MVP), and I believe I have accomplished that. I had to refactor my code multiple times as I attempted to implement different ideas that ultimately failed. For each feature, I rigorously tested to ensure that it was functioning correctly. Although there are still some rough patches that I am addressing to prevent errors, this process has honed my debugging skills.
 Throughout this mini-project, I made many mistakes, but this presented an opportunity for finding new solutions and learning about advanced Java concepts. Building a simple game from scratch using Java has enabled me to acquire new skills that will be invaluable as I embark on more significant code bases.
  </p>
-<h2>Resources & Documentation Used </h2>
+<h2>Resources & Documentation Used⛑️</h2>
 <ul>
 <li>Programiz.com Tutorial: <a href="https://www.programiz.com/java-programming/enumsDOMContentLoaded">Learning About Enums</a></li>
 <li>Stackoverflow: <a href="https://stackoverflow.com/questions/58819249/how-to-create-methods-for-a-rock-paper-scissors-game">Creating A Starter Rock, Paper, Scissors Game</a></li>
