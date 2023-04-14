@@ -7,6 +7,15 @@ import players.Player;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
+/**
+ *The code needs validation input, which is what I was working on to avoid unexpected
+ * errors, but I did not finish.
+ * Need to close the scanner also.
+ * Need to add try/catch.
+ * In the future, I will separate the game logic into separate methods for better readability.
+ *I initially had an enum called Choice to use instead of Strings to represent the choices (Rock, Paper, Scissors).
+ */
 public class PlayGame {
     private static Scanner scanner = new Scanner(System.in);
     private static ArrayList<String[]> gameHistory = new ArrayList<>();
@@ -57,7 +66,12 @@ public class PlayGame {
         scanner.close();
     }
 
-    private static int getGameModeChoice() {
+    /**
+     * I wanted to customize and personalize the menu options in this game by asking
+     * for the players names and adding emojis.
+     * @return
+     */
+    private static int getGameModeChoice() { //MENU
         System.out.println("\nWelcome to Rock Paper Scissors!\n\uD83D\uDDFF\uD83D\uDCD1\u2702");
         System.out.println("Select A Game Option: ");
         System.out.println("1. Play Against Another Player\uD83D\uDE4B");
