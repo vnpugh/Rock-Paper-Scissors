@@ -30,9 +30,27 @@ the MVP (Minimum Viable Product).
 <li>The random number generator is used to play against the computer.✅</li>
 </ul>
 
-
 <strong>Game Console</strong>
+<p>To add some engagement to the Java console, I added emoji's via unicode.</p>
 <p align="center">
 <img align="center" width="500" height="300" src="RockPaperScissors/assets/console.png" alt="console">
 </p>
 
+<h2>Technologies & Tools Used 🛠️</h2>
+<ul>
+ <li><strong>Project Management</strong></li>
+ 📋Github Projects (Kanban Board)
+ <li><strong>Version Control</strong></li>
+ 🕛GitHub
+ <li><strong>Developer Tools</strong></li>
+⬛Git Bash (Command Line)
+⬛IntelliJ (IDE)
+➕Unicode
+</ul>
+
+<h2>Resources & Documentation Used </h2>
+<ul>
+ <li>Learning About Enums: <a>https://www.programiz.com/java-programming/enumsDOMContentLoaded</a></li>
+<li>Creating A Starter Rock, Paper, Scissors Game: <a>https://stackoverflow.com/questions/58819249/how-to-create-methods-for-a-rock-paper-scissors-game</a>
+
+</ul>
