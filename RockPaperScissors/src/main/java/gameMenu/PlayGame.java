@@ -13,12 +13,11 @@ public class PlayGame {
         ArrayList<String> history = new ArrayList<String>();
         Player player1, player2;
 
-        System.out.println("Welcome to Rock Paper Scissors!\n");
+        System.out.println("Welcome to Rock Paper Scissors!\n\uD83D\uDDFF\uD83D\uDCD1\u2702");
         System.out.println("Select A Game Option: ");
-        System.out.println("1. Play Against Another Player\uD83D\uDE00");
-        System.out.println("2. Play Against the Computer");
-        System.out.println("3. View Your Game History");
-        System.out.println("4. Exit Game");
+        System.out.println("1. Play Against Another Player\uD83D\uDE4B");
+
+        System.out.println("2. Play Against the Computer\uD83D\uDCBB");
 
         System.out.print("Enter your choice: ");
         int choice = scanner.nextInt();
@@ -26,6 +25,7 @@ public class PlayGame {
         if (choice == 1) {
             player1 = new Human();
             player2 = new Human();
+
         } else {
             player1 = new Human();
             player2 = new Computer();
@@ -50,15 +50,15 @@ public class PlayGame {
                 history.add("Player 2 wins");
             }
 
-            System.out.print("Do you want to play again? (y/n): ");
+            System.out.print("Do You Want to Play Again? (y/n): ");
             String input = scanner.next();
             if (input.equals("n")) {
                 playing = false;
             }
         }
 
-        System.out.println("Game over!");
-        System.out.println("History:");
+        System.out.println("\nGOODBYE!\n");
+        System.out.println("Game History Print Out:");
         for (String result : history) {
             System.out.println(result);
         }
