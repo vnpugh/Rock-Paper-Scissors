@@ -7,21 +7,26 @@ package players;
  * method that must be implemented by subclasses.
  */
 public abstract class Player {
-    protected int score;
-    protected int lastMove;
+private int win = 0;
+private int lose = 0;
 
-    public int getScore() {
-        return score;
-    }
+public int getWin() {
+        return win;
+        }
 
-    public int getLastMove() {
-        return lastMove;
-    }
+public void setWin(int win) {
+        this.win = win;
+        }
 
-    public void addScore(int points) {
-        score += points;
-    }
-    public abstract int play(int opponentMove);
+public int getLose() {
+        return lose;
+        }
 
-    public abstract int makeMove();
-}
+public void setLose(int lose) {
+        this.lose = lose;
+        }
+
+public abstract String getChoice();
+
+public abstract String getName();
+        }

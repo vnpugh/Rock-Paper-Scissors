@@ -7,13 +7,10 @@ that takes an integer representing the move and returns an integer
  -1 for a loss).*/
 
 public interface RockPaperScissors {
-        int ROCK = 1;
-        int PAPER = 2;
-        int SCISSORS = 3;
-
-        int play(int move);
+        public void play();
 
 }
+
 
 
 

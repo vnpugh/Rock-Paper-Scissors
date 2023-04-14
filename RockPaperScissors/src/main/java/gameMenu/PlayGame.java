@@ -1,69 +1,115 @@
 package gameMenu;
 
-import players.Computer;
-import players.Human;
+import players.ComputerPlayer;
+import players.HumanPlayer;
 import players.Player;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class PlayGame {
+    private static Scanner scanner = new Scanner(System.in);
+    private static ArrayList<String[]> gameHistory = new ArrayList<>();
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        ArrayList<String> history = new ArrayList<String>();
+
+        int choice = getGameModeChoice();
         Player player1, player2;
 
-        System.out.println("Welcome to Rock Paper Scissors!\n\uD83D\uDDFF\uD83D\uDCD1\u2702");
-        System.out.println("Select A Game Option: ");
-        System.out.println("1. Play Against Another Player\uD83D\uDE4B");
-
-        System.out.println("2. Play Against the Computer\uD83D\uDCBB");
-
-        System.out.print("Enter your choice: ");
-        int choice = scanner.nextInt();
-
         if (choice == 1) {
-            player1 = new Human();
-            player2 = new Human();
-
+            player1 = new HumanPlayer("Player 1");
+            player2 = new HumanPlayer("Player 2");
         } else {
-            player1 = new Human();
-            player2 = new Computer();
+            player1 = new HumanPlayer("Player 1");
+            player2 = new ComputerPlayer();
         }
 
-        System.out.println("Let's play!");
-        boolean playing = true;
-        while (playing) {
-            int move1 = player1.makeMove();
-            int move2 = player2.makeMove();
-            int result1 = player1.play(move2);
-            int result2 = player2.play(move1);
+        while (true) {
+            String p1Choice = player1.getChoice();
+            String p2Choice = player2.getChoice();
 
-            if (result1 == 0 && result2 == 0) {
-                System.out.println("It's a tie!");
-                history.add("Tie");
-            } else if (result1 == 1 && result2 == -1) {
-                System.out.println("Player 1 wins!");
-                history.add("Player 1 wins");
-            } else if (result1 == -1 && result2 == 1) {
-                System.out.println("Player 2 wins!");
-                history.add("Player 2 wins");
-            }
+            recordGame(p1Choice, p2Choice);
 
-            System.out.print("Do You Want to Play Again? (y/n): ");
-            String input = scanner.next();
-            if (input.equals("n")) {
-                playing = false;
-            }
-        }
+            System.out.println(player1.getName() + " chose " + p1Choice + ".");
+            System.out.println(player2.getName() + " chose " + p2Choice + ".");
 
-        System.out.println("\nGOODBYE!\n");
-        System.out.println("Game History Print Out:");
-        for (String result : history) {
+            String result = getResult(p1Choice, p2Choice);
             System.out.println(result);
+
+            if (result.startsWith(player1.getName())) {
+                player1.setWin(player1.getWin() + 1);
+                player2.setLose(player2.getLose() + 1);
+            } else if (result.startsWith(player2.getName())) {
+                player2.setWin(player2.getWin() + 1);
+                player1.setLose(player1.getLose() + 1);
+            }
+
+            System.out.println("Current score:");
+            System.out.println(player1.getName() + ": " + player1.getWin() + " wins, " + player1.getLose() + " losses.");
+            System.out.println(player2.getName() + ": " + player2.getWin() + " wins, " + player2.getLose() + " losses.");
+
+            if (getPlayAgainChoice() == 2) {
+                break;
+            }
         }
 
+        System.out.println("Thanks For Playing Rock, Paper, Scissors!");
         scanner.close();
     }
-}
 
+    private static int getGameModeChoice() {
+        System.out.println("\nWelcome to Rock Paper Scissors!\n\uD83D\uDDFF\uD83D\uDCD1\u2702");
+        System.out.println("Select A Game Option: ");
+        System.out.println("1. Play Against Another Player\uD83D\uDE4B");
+        System.out.println("2. Play Against the Computer\uD83D\uDCBB");
+
+        System.out.print("Players Make Your Choice: ");
+
+
+        int choice = scanner.nextInt();
+        scanner.nextLine();
+
+        while (choice != 1 && choice != 2) {
+            System.out.println("Invalid choice. Please choose again.");
+            choice = scanner.nextInt();
+        }
+
+        return choice;
+    }
+
+    private static int getPlayAgainChoice() {
+        System.out.println("Would you like to play again?");
+        System.out.println("1. Yes");
+        System.out.println("2. No");
+
+        int choice = scanner.nextInt();
+        scanner.nextLine();
+
+        while (choice != 1 && choice != 2) {
+            System.out.println("Invalid choice. Please choose again.");
+            choice = scanner.nextInt();
+            scanner.nextLine();
+        }
+
+        return choice;
+    }
+
+    private static String getResult(String p1Choice, String p2Choice) {
+        if (p1Choice.equals(p2Choice)) {
+            return "It's a tie!";
+        }
+
+        if ((p1Choice.equals("rock") && p2Choice.equals("scissors"))
+                || (p1Choice.equals("paper") && p2Choice.equals("rock"))
+                || (p1Choice.equals("scissors") && p2Choice.equals("paper"))) {
+            return "Player 1 wins!";
+        } else {
+            return "Player 2 wins!";
+        }
+    }
+
+    private static void recordGame(String p1Choice, String p2Choice) {
+        String[] gameRecord = {p1Choice, p2Choice};
+        gameHistory.add(gameRecord);
+    }
+}
