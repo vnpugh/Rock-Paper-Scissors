@@ -1,14 +1,19 @@
 package gameInterfaces;
 
+
+/**This interface defines the constants for the game moves and the play method
+that takes an integer representing the move and returns an integer
+ representing the result of the game (0 for a tie, 1 for a win,
+ -1 for a loss).*/
+
 public interface RockPaperScissors {
-        int rock = 0;
-        int paper = 1;
-        int scissors = 2;
-        int tie = 0;
-        int player1Wins = 1;
-        int player2Wins = 2;
-        int noWinner = -1;
-    }
+        int ROCK = 1;
+        int PAPER = 2;
+        int SCISSORS = 3;
+
+        int play(int move);
+
+}
 
 
 
