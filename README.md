@@ -8,3 +8,9 @@ find hours of entertainment and excitement as you try to outwit your opponent wi
 when the game is over, the winner will be declared, leaving you with a sense of satisfaction and 
 achievement. So what are you waiting for? Dive into the world of rock-paper-scissors today and 
 see if you have what it takes to emerge victorious!</p>
+
+<strong>Game Console</strong>
+<p align="center">
+<img align="center" width="500" height="300" src="RockPaperScissors/assets/console.png" alt="console">
+</p>
+
