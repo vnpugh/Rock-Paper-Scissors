@@ -60,5 +60,5 @@ Throughout this mini-project, I made many mistakes, but this presented an opport
 <li>Stackoverflow: <a href="https://stackoverflow.com/questions/53794027/how-to-create-2-new-players-and-get-there-name-from-an-edittext-field">Adding Player Names in Text Fields</a></li>
 <li>Stackoverflow: <a href="https://stackoverflow.com/questions/58819249/how-to-create-methods-for-a-rock-paper-scissors-game">Creating Methods in Paper, Rock, Scissors</a></li>
 <li>Medium.com: <a href="https://medium.com/geekculture/how-to-code-a-simple-rock-paper-scissors-game-in-java-7ec5dda68be1">Rock-Paper-Scissors Game in Java</a></li>
-<li>Java Documentation: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html">Class Random</a></li>g-text-project-tic-tac">Displaying the Winning Message</a></li>
+<li>Java Documentation: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html">Class Random</a></li>
 </ul>
