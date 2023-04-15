@@ -8,6 +8,15 @@ find hours of entertainment and excitement as you try to outwit your opponent wi
 when the game is over, the winner will be declared, leaving you with a sense of satisfaction and 
 achievement. So what are you waiting for? Dive into the world of rock-paper-scissors today and 
 see if you have what it takes to emerge victorious!</p>
+<h2>What is Rock, Paper, Scissors:question:</h2>
+<p>Rock, Paper, Scissors is a simple game, usually played in the form of a hand gestures, and popular 
+amongst children> The purpose of the game is to reinforce quick thinking and simple decision-making. 
+To determine a winner, the game decisions are based on the following:</p>
+<ul>
+<li>Rock:rock:(crushes) beats Scissors:scissors:.</li>
+<li>Scissors:scissors:(cuts) beats Paper:page_facing_up:.</li>
+<li>Paper:page_facing_up:(covers) beats Rock:rock:.</li>
+</ul>
 <h2>Installation</h2>
 <p>
 No installation is needed to play the game. The application can be played in any console.
@@ -18,7 +27,7 @@ Projects to keep track of the technical requirements and identified the resource
 the MVP (Minimum Viable Product).
 </p>
 
-<h2>Technical Requirements🏁</h2>
+<h1>Technical Requirements🏁</h1>
 <ul>
 <li>An array is used to store the game's history and the player's game wins, losses, or ties.✅</li>
 <li>The player can play rock–paper–scissors against a computer player.✅</li>
@@ -36,7 +45,7 @@ the MVP (Minimum Viable Product).
 <img align="center" width="500" height="300" src="RockPaperScissors/assets/console.png" alt="console">
 </p>
 
-<h2>Technologies & Tools Used🛠️</h2>
+<h1>Technologies & Tools Used🛠️</h1>
 <ul>
  <li><strong>Project Management</strong></li>
  📋Github Projects (Kanban Board)
@@ -51,7 +60,14 @@ the MVP (Minimum Viable Product).
 <p>Although all of the bonus items were not included in the Rock, Paper, Scissors Game, the project provided me with an opportunity to consider the game's implementation more deeply. My objective was to achieve the minimum viable product (MVP), and I believe I have accomplished that. I had to refactor my code multiple times as I attempted to implement different ideas that ultimately failed. For each feature, I rigorously tested to ensure that it was functioning correctly. Although there are still some rough patches that I am addressing to prevent errors, this process has honed my debugging skills.
 Throughout this mini-project, I made many mistakes, but this presented an opportunity for finding new solutions and learning about advanced Java concepts. Building a simple game from scratch using Java has enabled me to acquire new skills that will be invaluable as I embark on more significant code bases.
  </p>
-<h2>Resources & Documentation Used⛑️</h2>
+<h1>Icebox🧊</h1>
+<h3>Here are some bonus features I would like to implement in the future:</h3>
+<ul>
+<li>:triangular_flag_on_post: Write automated JUnit tests for the game.</li>
+<li>:triangular_flag_on_post: Add exception handling to respond to unexpected events such as bad user input.</li>
+<li>Incorporate sound into the game via Processing.</li>
+</ul>
+<h1>Resources & Documentation Used⛑️</h1>
 <ul>
 <li>Programiz.com Tutorial: <a href="https://www.programiz.com/java-programming/enumsDOMContentLoaded">Learning About Enums</a></li>
 <li>Stackoverflow: <a href="https://stackoverflow.com/questions/58819249/how-to-create-methods-for-a-rock-paper-scissors-game">Creating A Starter Rock, Paper, Scissors Game</a></li>
