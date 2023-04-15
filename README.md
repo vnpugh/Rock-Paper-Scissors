@@ -29,7 +29,7 @@ the MVP (Minimum Viable Product). Also, creating a Kanban Board helps define the
 identify the requirements, and reduce scope creep. 
 </p>
 <p align="center">
-<img align="center" width="500" height="300" src="RockPaperScissors/assets/kanban.png.png" alt="kanban">
+<img align="center" width="500" height="300" src="RockPaperScissors/assets/kanban.png" alt="kanban">
 </p>
 <h1>Technical Requirements🏁</h1>
 <ul>
