@@ -10,23 +10,27 @@ achievement. So what are you waiting for? Dive into the world of rock-paper-scis
 see if you have what it takes to emerge victorious!</p>
 <h2>What is Rock, Paper, Scissors:question:</h2>
 <p>Rock, Paper, Scissors is a simple game, usually played in the form of a hand gestures, and popular 
-amongst children> The purpose of the game is to reinforce quick thinking and simple decision-making. 
+amongst children. The purpose of the game is to reinforce quick thinking and simple decision-making. 
 To determine a winner, the game decisions are based on the following:</p>
 <ul>
-<li>Rock:rock:(crushes) beats Scissors:scissors:.</li>
-<li>Scissors:scissors:(cuts) beats Paper:page_facing_up:.</li>
-<li>Paper:page_facing_up:(covers) beats Rock:rock:.</li>
+<li>Rock:rock:(crushes) beats Scissors:scissors:</li>
+<li>Scissors:scissors:(cuts) beats Paper:page_facing_up:</li>
+<li>Paper:page_facing_up:(covers) beats Rock:rock:</li>
 </ul>
 <h2>Installation</h2>
 <p>
 No installation is needed to play the game. The application can be played in any console.
 <h1>The Planning Process🖋️</h1>
 <p>
-Again, I took a similar planning approach in this assignment before starting to code. I created the Kanban Board in Github
-Projects to keep track of the technical requirements and identified the resources needed to complete 
-the MVP (Minimum Viable Product).
+Again, I took a similar planning approach in this assignment before starting to code. I created
+my <a href="https://github.com/users/vnpugh/projects/2/views/1?layout=board">Kanban Board</a>
+in Github Projects to keep track of the technical requirements and identify the resources needed to complete 
+the MVP (Minimum Viable Product). Also, creating a Kanban Board helps define the project's objectives,
+identify the requirements, and reduce scope creep. 
 </p>
-
+<p align="center">
+<img align="center" width="500" height="300" src="RockPaperScissors/assets/kanban.png.png" alt="kanban">
+</p>
 <h1>Technical Requirements🏁</h1>
 <ul>
 <li>An array is used to store the game's history and the player's game wins, losses, or ties.✅</li>
