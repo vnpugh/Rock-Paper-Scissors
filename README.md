@@ -67,7 +67,12 @@ Additionally, the players will see games won/loss stats, which is part of the ga
 ⬛IntelliJ (IDE)
 ➕Unicode
 </ul>
-<h1>My Thought Process:brain:</h1>
+<h1>Building the :rock::page_facing_up::scissors:Game🦾</h1>
+<h2>The Class Diagram Structure</h2>
+<p align="center">
+<img align="center" width="500" height="300" src="RockPaperScissors/assets/diagram.png" alt="console">
+</p>
+<h2>My Thought Process:brain:</h2>
 <p>◾I initially created the <strong>RockPaperScissors</strong> interface with the play() method to be implemented by 
 any class that implements the "RockPaperScissors" interface. I initially wanted the play() method 
 take an integer as input representing the move made by the player, and return an integer representing
