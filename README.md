@@ -152,3 +152,10 @@ a good programming practice.</p>
 <li>Medium.com: <a href="https://medium.com/geekculture/how-to-code-a-simple-rock-paper-scissors-game-in-java-7ec5dda68be1">Rock-Paper-Scissors Game in Java</a></li>
 <li>Java Documentation: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html">Class Random</a></li>
 </ul>
+<h1>Project Updates:loud_sound:</h1>
+<p>As this is an ongoing project, I will continue to provide updates to this section as I conduct further research on relevant 
+topics pertaining to the implementation of new features, as well as any modifications made to the project. Stay tuned for 
+further developments!<br>
+:small_blue_diamond:(04/15/23): Today, I researched how the <a href="https://www.baeldung.com/java-minimax-algorithm">Minimax Algorithm</a> can be implemented with Java.
+This research will be useful when I go back and implement the computer AI bonus feature.
+</p>
