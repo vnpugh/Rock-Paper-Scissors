@@ -151,6 +151,7 @@ a good programming practice.</p>
 <li>Stackoverflow: <a href="https://stackoverflow.com/questions/58819249/how-to-create-methods-for-a-rock-paper-scissors-game">Creating Methods in Paper, Rock, Scissors</a></li>
 <li>Medium.com: <a href="https://medium.com/geekculture/how-to-code-a-simple-rock-paper-scissors-game-in-java-7ec5dda68be1">Rock-Paper-Scissors Game in Java</a></li>
 <li>Java Documentation: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html">Class Random</a></li>
+<li>Free Code Camp: <a href="https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/">The SOLID Principles Of OOP</a></li>
 </ul>
 <h1>Project Updates:loud_sound:</h1>
 <p>As this is an ongoing project, I will continue to provide updates to this section as I conduct further research on relevant 
