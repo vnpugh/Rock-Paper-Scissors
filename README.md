@@ -73,17 +73,20 @@ any class that implements the "RockPaperScissors" interface. I initially wanted 
 take an integer as input representing the move made by the player, and return an integer representing
 the result of the game. The result would be defined as 0 for a tie, 1 for a win, and -1 for a loss. However,
 this method takes in no parameters and returns void after I decided to try another method.</p>
-<p>◾I initially created the <strong>GameHistory</strong> class to keep track of the history of the game by recording the moves made by each player and the winner of each game. 
-I also created three private instance variables: "player1Moves", "player2Moves", and "winners", all of which are of type ArrayList<String>. This class also has a constructor that initializes each of the three ArrayList variables to a new, empty ArrayList of type String. Additionally, this class has two public methods. The first method "addMove()" takes three String parameters which represents the moves
-made by both players and the winner of the game. Next, these player moves and the winner are added to the respective ArrayList variables.
-The second public method "printHistory()" does not take any parameters and prints a message "Game History:" to the console. I also
+<p>◾I initially created the <strong>GameHistory</strong> class to keep track of the history of the game by recording the 
+moves made by each player and the winner of each game. I also created three private instance variables: "player1Moves", 
+"player2Moves", and "winners", all of which are of type ArrayList<String>. This class also has a constructor that initializes 
+each of the three ArrayList variables to a new, empty ArrayList of type String. 
+<br><br>
+Additionally, this class has two public methods. The first method "addMove()" takes three String parameters which represents the moves made by both players and the winner of 
+the game. Next, these player moves and the winner are added to the respective ArrayList variables. The second public method "printHistory()" does not take any parameters and prints a message "Game History:" to the console. I also
 wanted to include this class to iterate through the size of the "player1Moves" ArrayList using a for loop and then the moves 
 made by both players and the winner for each game will be printed to the console. Overall, the "printHistory()" method is used to display
-the history of the game stats.</p>
+the history of the game stats. </p>
 <p>◾The <strong>ComputerPlayer</strong> class was created to represent a computer player, and this class extends the "Player"
 class. The class overrides two methods: "getChoice()" and "getName()". The "getChoice()" method generates a random integer using 
 the Java "Random" class and then uses a switch statement to convert that integer into one of three String choices: "rock", "paper", 
-or "scissors". The chosen String is then returned from the method. <br>
+or "scissors". The chosen String is then returned from the method.
 I wanted to use a switch statement to handle the "getChoice" functionality to make the code more readable and maintainable 
 compared to using a series of if-else statements. Finally, the "getName()" method returns the name of the player as "Computer".
 </p>
@@ -91,18 +94,20 @@ compared to using a series of if-else statements. Finally, the "getName()" metho
 user input from the standard input stream. The constructor was initially created to take a String parameter "s" but, it 
 initializes the "scanner" variable instead. I used a while loop to ensure that the user's input is valid (either "rock", "paper", 
 or "scissors"). The while loop continuously prompts the user until valid input is given, and the chosen move is returned from 
-the method. To enhance code readability and error handling, I included the @Override annotation for the "getChoice()" and 
-"getName()" methods for best practice.  
+the method. To enhance code readability and error handling, I included the <strong>@Override</strong> annotation for 
+the "getChoice()" and "getName()" methods for best practice.  
 </p>
-<p>◾The abstract <strong>Player</strong> class represents the state of a player in the game. I created the "win" and "lose" private instance variables which are initialized to 0.
+<p>◾The abstract <strong>Player</strong> class represents the state of a player in the game. I created the "win" and "lose" 
+private instance variables which are initialized to 0.
 Importantly, I identified the most important methods that should be included for this game to access the win/loss statistics 
-of the player: 1. "getWin()", 2. "setWin()", 3. "getLose()", and 4. "setLose()". <br>
+of the player: 1. "getWin()", 2. "setWin()", 3. "getLose()", and 4. "setLose()". 
+<br><br>
 Next, I wanted to include two abstract methods: 1."getChoice()" and 2. "getName()". These methods do not have any implementation 
 in the parent class, so they must be implemented by subclasses of the "Player" class because the implementation of these methods 
 will be different for each player subclass. Overall, I wanted the Player class to provide a basic framework for creating different 
 types of players with their own implementation for choosing moves and obtaining their name.
 </p>
-<p>◾I created the <strong>PlayGame</strong> main class to control the game's flow. 
+<p>◾Lastly, I created the <strong>PlayGame</strong> main class to control the game's flow. 
 The getGameModeChoice() method is used to display the menu to the user and asks them to select a game option. The method 
 returns an integer representing the player's choice: 1. for playing against another human player, and 2. for playing against 
 the computer. Instead of using a switch statement, I have chosen to implement a while loop to manage the game's flow due to 
@@ -110,19 +115,8 @@ the uncertainty of how many times the user will engage in gameplay. The loop wil
 the game, which is determined by the "getPlayAgainChoice()" method. During each iteration of the loop, the two 
 players make their selections, the game documents their choices in the gameHistory ArrayList, and the game 
 determines the winner based on the game rules. The winner's score is increased while the 
-loser's score is decreased. <br>
+loser's score is decreased.
 </p>
-<p>◾
-</p>
-<p>◾
-</p>
-<p>◾
-</p>
-<p>◾
-</p>
-
-
-
 <h1>What I Learned📚😖😣</h1>
 <p>◾Although all of the bonus items were not included in the Rock, Paper, Scissors Game, the project provided me with an opportunity 
 to consider the game's implementation more deeply. My objective was to achieve the minimum viable product (MVP), and I believe 
